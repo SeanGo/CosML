@@ -22,7 +22,10 @@ p = zeros(size(X, 1), 1);
 %
 
 
-
+temp1 = [ones(m, 1) X];
+temp2 = [ones(m, 1) sigmoid(temp1 * Theta1')]
+[maxTemp3, maxTemp3_2] = max(sigmoid(temp2 * Theta2')');
+p = maxTemp3_2';
 
 
 
